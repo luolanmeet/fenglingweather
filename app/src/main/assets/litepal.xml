@@ -1,0 +1,12 @@
+<litepal>
+    <dbname value = "fengling_weather"/>
+    <version value ="1" />
+
+    <list>
+        <mapping class="com.cck.fenglingweather.db.Province"/>
+        <mapping class="com.cck.fenglingweather.db.City"/>
+        <mapping class="com.cck.fenglingweather.db.County"/>
+    </list>
+
+
+</litepal>
