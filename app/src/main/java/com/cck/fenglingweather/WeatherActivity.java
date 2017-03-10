@@ -1,5 +1,6 @@
 package com.cck.fenglingweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.cck.fenglingweather.gson.Forecast;
 import com.cck.fenglingweather.gson.Weather;
+import com.cck.fenglingweather.service.AutoUpdateService;
 import com.cck.fenglingweather.util.HttpUtil;
 import com.cck.fenglingweather.util.Utility;
 
@@ -238,5 +240,7 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }
